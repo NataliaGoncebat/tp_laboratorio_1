@@ -2,12 +2,12 @@
 #include "bibliotecatp1.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <conio.h>
 
 
   //------------------------------------------------------------------
   //---------------------SUMA-----------------------------------------
-int Sumar (int unNumero, int otroNumero)
+int f_sumar (int unNumero, int otroNumero)
 {
 	int suma;
 
@@ -17,7 +17,7 @@ int Sumar (int unNumero, int otroNumero)
 }
   //------------------------------------------------------------------
   //---------------------RESTA----------------------------------------
- int Restar (int unNumero, int otroNumero)
+ int f_restar (int unNumero, int otroNumero)
 {
 	int resta;
 
@@ -28,7 +28,7 @@ int Sumar (int unNumero, int otroNumero)
 
   //------------------------------------------------------------------
   //---------------------DIVISION-------------------------------------
- int Dividir (int unNumero, int otroNumero)
+ int f_dividir (int unNumero, int otroNumero)
 {
 	int division;
 
@@ -41,7 +41,7 @@ int Sumar (int unNumero, int otroNumero)
 }
   //------------------------------------------------------------------
   //---------------------MULTIPLICACION-------------------------------
- int Multiplicar (int unNumero, int otroNumero)
+ int f_multiplicar (int unNumero, int otroNumero)
 {
 	int multiplicacion;
 
@@ -54,31 +54,32 @@ int Sumar (int unNumero, int otroNumero)
   //---------------------FACTORIAL------------------------------------
 
 //factorizacion=factorizar(unNumero(unNumero*factorial(unNumero-1)), otroNumero(otroNumero*factorial(otroNumero-1)));
- int factorizacion (int unNumero, int otroNumero)
+ int f_factorizacion (int unNumero)
   {
-	 int i;
-	 int factorial1;
-	 int factorial2;
+	int i=1;
+	 int factorial1=1;
+	 int factorial2=1;
+	 int factorial=1;
 
 
 
 	 if(unNumero == 0){
-		 factorial1 = 1;
+		 factorial = 1;
 	 }else{
 	  for(i=unNumero; i>1;i--){
 		  factorial1 = factorial1 * i;
 		   }
 	  }
-
+/*
 
 	 if(otroNumero == 0){
-			 factorial2 = 1;
+			 factorial = 1;
 		 }else{
 	  for(i=otroNumero; i>1;i--){
 	 		  factorial2 = factorial2 * i;
 	 		   }
-		 }
-	  return factorial1, factorial2;
+		 }*/
+	  return (factorial1);
 
  }
 

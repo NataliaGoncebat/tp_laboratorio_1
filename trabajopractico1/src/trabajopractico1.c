@@ -26,6 +26,7 @@ que contenga las funciones para realizar las cinco operaciones.
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
 #include "bibliotecatp1.h"
 
 
@@ -40,8 +41,8 @@ int main(void) {
 	int resta;
 	int division;
 	int multiplicacion;
-	int factorizacion;
-	int factorizar;
+    int factorizacion;
+
 	int factorial1;
 	int factorial2;
 
@@ -69,24 +70,25 @@ int main(void) {
 		switch(opcion)
 				{
 					case 1:
-						suma = Sumar(unNumero, otroNumero);
+						suma = f_sumar(unNumero, otroNumero);
 						printf("El resultado de %d + %d es: %d\n",unNumero,otroNumero,suma);
 						break;
 					case 2:
-						resta = Restar(unNumero, otroNumero);
+						resta = f_restar(unNumero, otroNumero);
 						printf("El resultado de %d - %d es: %d\n",unNumero,otroNumero,resta);
 						break;
 					case 3:
-						division = Dividir(unNumero, otroNumero);
+						division = f_dividir(unNumero, otroNumero);
 						printf("El resultado de %d / %d es: %d\n",unNumero,otroNumero,division);
 						break;
 					case 4:
-						multiplicacion = Multiplicar(unNumero, otroNumero);
+						multiplicacion = f_multiplicar(unNumero, otroNumero);
 						printf("El resultado de %d * %d es: %d\n",unNumero,otroNumero,multiplicacion);
 						break;
 					case 5:
-						factorizacion = factorizar(unNumero, otroNumero);
-						printf("El factorial de %d es: %d y El factorial de %d es: %d\n",unNumero,factorial1,otroNumero,factorial2);
+						factorial1 = f_factorizacion(unNumero);
+						factorial2 = f_factorizacion(otroNumero);
+						printf("El factorial de %d es: %d y el factorial de %d es: %d\n",unNumero,factorial1,otroNumero,factorial2);
 						break;
 					case 6:
 						printf("GRACIAS POR USAR NUESTRO PROGRAMA\n");
@@ -94,7 +96,7 @@ int main(void) {
 				}
 
 			}while(opcion!=6);
-
+	system("cls||clear");
 
 
 	return 0;
