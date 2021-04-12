@@ -1,5 +1,5 @@
 /******************************************************************************
-
+GONCEBAT, NATALIA.
 1 Enunciado
 Hacer una calculadora. Para ello el programa iniciará y contará con un menú de opciones:
 1. Ingresar 1er operando (A=x)
@@ -24,6 +24,7 @@ que contenga las funciones para realizar las cinco operaciones.
 • Deberán contemplarse los casos de error (división por cero, etc)
 • Documentar todas las funciones
 *******************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
@@ -36,25 +37,80 @@ int main(void) {
 
 	int opcion;
 	int unNumero;
-	int otroNumero;
+	int otroNumero;/*
 	int suma;
 	int resta;
-	int division;
 	int multiplicacion;
-    int factorizacion;
+    int factorizacion;*/
+	//int r_division;
 
 	int factorial1;
 	int factorial2;
-
-
-
+	int resultado;
+	float resultadoFloat;
+/*
 	do
+		{
+			printf("\n1.Ingrese un numero: ");
+			printf("2.Ingrese otro numero: ");
+			printf("3. Suma\n");
+			printf("4. Resta\n");
+			printf("5. Division\n");
+			printf("6. Multiplicacion\n");
+			printf("7. Factorizacion\n");
+			printf("8. Salir\n");
+			printf("Elija una opcion: ");
+			scanf("%d", &opcion);
+
+			switch(opcion)
+					{
+						case 1:
+							printf("\nIngrese el primer operando: \n");
+							fflush(stdin);
+							scanf("%d", &unNumero);
+							break;
+						case 2:
+							printf("\nIngrese el segundo operando: \n");
+							fflush(stdin);
+							scanf("%d", &otroNumero);
+							break;
+						case 3:
+							resultado = f_sumar(unNumero, otroNumero);
+							printf("El resultado de %d + %d es: %d\n",unNumero,otroNumero,resultado);
+							break;
+						case 4:
+							resultado = f_restar(unNumero, otroNumero);
+							printf("El resultado de %d - %d es: %d\n",unNumero,otroNumero,resultado);
+							break;
+						case 5:
+							resultadoFloat = f_dividir(unNumero, otroNumero);
+							printf("El resultado de %d / %d es: %f", unNumero,otroNumero,resultadoFloat);
+							//printf("El resultado es: %f\n",unNumero,otroNumero,resultado);
+							break;
+						case 6:
+							resultado = f_multiplicar(unNumero, otroNumero);
+							printf("El resultado de %d * %d es: %d\n",unNumero,otroNumero,resultado);
+							break;
+						case 7:
+							//resultado = f_factorizacion(unNumero, otroNumero);
+							factorial1 = f_factorizacion(unNumero);
+							factorial2 = f_factorizacion(otroNumero);
+							printf("El factorial de %d es: %d y el factorial de %d es: %d\n",unNumero,factorial1,otroNumero,factorial2);
+							break;
+						case 8:
+							printf("GRACIAS POR USAR NUESTRO PROGRAMA\n");
+						break;
+					}
+		}while(opcion!=8);
+	*/do
 	{
 		system("cls");
 
 		printf("Ingrese un numero: ");
+		fflush(stdin);
 		scanf("%d", &unNumero);
 		printf("Ingrese otro numero: ");
+		fflush(stdin);
 		scanf("%d", &otroNumero);
 
 
@@ -70,22 +126,24 @@ int main(void) {
 		switch(opcion)
 				{
 					case 1:
-						suma = f_sumar(unNumero, otroNumero);
-						printf("El resultado de %d + %d es: %d\n",unNumero,otroNumero,suma);
+						resultado = f_sumar(unNumero, otroNumero);
+						printf("El resultado de %d + %d es: %d\n",unNumero,otroNumero,resultado);
 						break;
 					case 2:
-						resta = f_restar(unNumero, otroNumero);
-						printf("El resultado de %d - %d es: %d\n",unNumero,otroNumero,resta);
+						resultado = f_restar(unNumero, otroNumero);
+						printf("El resultado de %d - %d es: %d\n",unNumero,otroNumero,resultado);
 						break;
 					case 3:
-						division = f_dividir(unNumero, otroNumero);
-						printf("El resultado de %d / %d es: %d\n",unNumero,otroNumero,division);
+						resultadoFloat = f_dividir(unNumero, otroNumero);
+						printf("El resultado de %d / %d es: %f", unNumero,otroNumero,resultadoFloat);
+						//printf("El resultado es: %f\n",unNumero,otroNumero,resultado);
 						break;
 					case 4:
-						multiplicacion = f_multiplicar(unNumero, otroNumero);
-						printf("El resultado de %d * %d es: %d\n",unNumero,otroNumero,multiplicacion);
+						resultado = f_multiplicar(unNumero, otroNumero);
+						printf("El resultado de %d * %d es: %d\n",unNumero,otroNumero,resultado);
 						break;
 					case 5:
+						//resultado = f_factorizacion(unNumero, otroNumero);
 						factorial1 = f_factorizacion(unNumero);
 						factorial2 = f_factorizacion(otroNumero);
 						printf("El factorial de %d es: %d y el factorial de %d es: %d\n",unNumero,factorial1,otroNumero,factorial2);
@@ -96,9 +154,10 @@ int main(void) {
 				}
 
 			}while(opcion!=6);
+
 	system("cls||clear");
 
 
 	return 0;
-}
+	}
 

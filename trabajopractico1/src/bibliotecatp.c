@@ -9,77 +9,64 @@
   //---------------------SUMA-----------------------------------------
 int f_sumar (int unNumero, int otroNumero)
 {
-	int suma;
+	int resultado;
 
-	suma = unNumero + otroNumero;
+	setbuf(stdout, NULL);
+	resultado = unNumero + otroNumero;
 
-	return suma;
+
+	return resultado;
 }
   //------------------------------------------------------------------
   //---------------------RESTA----------------------------------------
  int f_restar (int unNumero, int otroNumero)
 {
-	int resta;
+	int resultado;
 
-	resta = unNumero - otroNumero;
+	setbuf(stdout, NULL);
+	resultado = unNumero - otroNumero;
 
-	return resta;
+	return resultado;
 }
 
   //------------------------------------------------------------------
   //---------------------DIVISION-------------------------------------
- int f_dividir (int unNumero, int otroNumero)
+ float f_dividir (float unNumero, float otroNumero)
 {
-	int division;
+	float resultado;
+
+	setbuf(stdout, NULL);
 
 	if(otroNumero == 0){
 		printf("No es posible dividir por cero.");
 		}else{
-	 division = unNumero / otroNumero;
+			resultado = unNumero / otroNumero;
 		}
-	return division;
+	return resultado;
 }
   //------------------------------------------------------------------
   //---------------------MULTIPLICACION-------------------------------
  int f_multiplicar (int unNumero, int otroNumero)
 {
-	int multiplicacion;
+	int resultado;
 
-	multiplicacion = unNumero * otroNumero;
+	setbuf(stdout, NULL);
+	resultado = unNumero * otroNumero;
 
-	return multiplicacion;
+	return resultado;
 }
 
   //------------------------------------------------------------------
   //---------------------FACTORIAL------------------------------------
 
-//factorizacion=factorizar(unNumero(unNumero*factorial(unNumero-1)), otroNumero(otroNumero*factorial(otroNumero-1)));
+
  int f_factorizacion (int unNumero)
   {
-	int i=1;
-	 int factorial1=1;
-	 int factorial2=1;
-	 int factorial=1;
-
-
-
+	 int resultado;
 	 if(unNumero == 0){
-		 factorial = 1;
-	 }else{
-	  for(i=unNumero; i>1;i--){
-		  factorial1 = factorial1 * i;
-		   }
-	  }
-/*
-
-	 if(otroNumero == 0){
-			 factorial = 1;
-		 }else{
-	  for(i=otroNumero; i>1;i--){
-	 		  factorial2 = factorial2 * i;
-	 		   }
-		 }*/
-	  return (factorial1);
-
- }
-
+	 	resultado = 1;
+	 	 }else{
+	 		resultado=unNumero*f_factorizacion(unNumero-1);
+	 	 }
+	 return resultado;
+	 }

@@ -29,7 +29,7 @@ int f_restar(int, int);
  * @param Realiza la division
  * @return Muestra el resultado
  */
-int f_dividir (int, int);
+float f_dividir (float, float);
 /**
  * @fn int Multiplicar(int, int)
  * @brief Pide un numero
@@ -40,13 +40,12 @@ int f_dividir (int, int);
 int f_multiplicar (int, int);
 /**
  * @fn int factorizacion(int, int)
- * @b
- * rief Pide un numero
- * @param Pide otro numero
+ * @b Pide un numero
+ * rief Pide otro numero
+ * @param Realiza la factorizacion
  * @return Muestra el resultado
  */
 int f_factorizacion (int);
-//int factorizacion(unNumero(unNumero*factorial(unNumero-1)), otroNumero(otroNumero*factorial(otroNumero-1)));
-//factorizacion=factorizar(unNumero(unNumero*factorial(unNumero-1)), otroNumero(otroNumero*factorial(otroNumero-1)));
+
 
 #endif /* BIBLIOTECATP1_H_ */
